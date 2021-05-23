@@ -128,6 +128,7 @@ function ResetPassword ({props}: any)  {
             newPasswordConfirm: newPasswordConfirm
         })
             .then( response => {
+                alert('패스워드가 변경되었습니다.');
                 history.push('/')
             })
             .catch( error =>{
