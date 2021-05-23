@@ -17,6 +17,7 @@ const ResetPasswordBlock = styled.div`
         line-height: 15px;
         opacity: 0.8;
         margin: -10px 0 14px 0;
+        color: #CD5C5C;
     }
 `;
 

@@ -6,6 +6,7 @@ const ButtonBlock = styled.button`
     height : 56px;
     border: none;
     border-radius: 8px;
+    background-color: #C0C0C0;
     cursor: pointer;
         
     p {
