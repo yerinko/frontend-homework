@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
-import Ably from "../../../img/ably.jpeg";
 import SolidButton from "../../../components/common/Button/SolidButton";
-import axios from "axios";
-import api from "../../../lib/api";
 import Input from "../../common/Input/Input";
 
 const ResetPasswordBlock = styled.div`    
@@ -26,8 +23,16 @@ function StepOne ({ value, onChange, onSubmit } : ResetPasswordProps)  {
         <ResetPasswordBlock>
             <form onSubmit={onSubmit}>
                 <label>비밀번호 재설정</label>
-                <Input name="Email" type="email" placeholder="ably452@dummy.com" value={value} onChange={onChange}/>
-                <SolidButton title="다음" />
+                <Input
+                    name="Email"
+                    type="email"
+                    placeholder="ably452@dummy.com"
+                    value={value}
+                    onChange={onChange}
+                />
+                <SolidButton
+                    title="다음"
+                />
             </form>
         </ResetPasswordBlock>
     );

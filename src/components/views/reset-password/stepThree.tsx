@@ -1,9 +1,6 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
-import Ably from "../../../img/ably.jpeg";
 import SolidButton from "../../../components/common/Button/SolidButton";
-import axios from "axios";
-import api from "../../../lib/api";
 import Input from "../../common/Input/Input";
 
 const ResetPasswordBlock = styled.div`
@@ -29,12 +26,31 @@ function StepThree ({email, issueToken, newPassword, newPasswordConfirm, handleR
         <ResetPasswordBlock>
             <form onSubmit={handleResetPassword}>
                 <label>비밀번호 재설정</label>
-                <Input name="Email" type="email" placeholder="ably452@dummy.com" value={email}/>
+                <Input
+                    name="Email"
+                    type="email"
+                    placeholder="ably452@dummy.com"
+                    value={email}
+                />
                 <label>새로운 비밀번호</label>
-                <Input name="newPassword" type="password" placeholder="새로운 비밀번호 입력" value={newPassword} onChange={onChange}/>
+                <Input
+                    name="newPassword"
+                    type="password"
+                    placeholder="새로운 비밀번호 입력"
+                    value={newPassword}
+                    onChange={onChange}
+                />
                 <label>새로운 비밀번호 확인</label>
-                <Input name="newPasswordConfirm" type="password" placeholder="새로운 비밀번호 입력" value={newPasswordConfirm} onChange={onChange}/>
-                <SolidButton title="다음" />
+                <Input
+                    name="newPasswordConfirm"
+                    type="password"
+                    placeholder="새로운 비밀번호 입력"
+                    value={newPasswordConfirm}
+                    onChange={onChange}
+                />
+                <SolidButton
+                    title="다음"
+                />
             </form>
         </ResetPasswordBlock>
     );

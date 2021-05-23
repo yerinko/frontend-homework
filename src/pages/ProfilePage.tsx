@@ -1,15 +1,15 @@
 import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
-import Ably from "../img/ably.jpeg";
+import { Alert } from 'antd';
 import api from "../lib/api";
 import { useHistory } from 'react-router';
 import { clearAuth, getAccessToken } from "../lib/auth";
 import SolidButton from "../components/common/Button/SolidButton";
 
 const LoginBlock = styled.div`
-    label {
+    h1 {
         height: 24px;
-        font-size: 16px;
+        font-size: 18px;
         font-weight: bold;
         font-stretch: normal;
         font-style: normal;
@@ -23,6 +23,12 @@ const LoginBlock = styled.div`
         width: 100%;
         height: 100%;
         border-radius: 8px;
+    }
+    
+    .userInfo {
+        width: 100%;
+        height: 100%;
+        margin: 24px 0;
     }
 `;
 
@@ -70,9 +76,10 @@ function ProfilePage ()  {
                 alt="profileImage"
                 className="profile"
             />
-            <p>{form.name}</p>
-            <p>{form.email}</p>
-
+            <div className="userInfo">
+                <h1>{form.name}</h1>
+                <h1>{form.email}</h1>
+            </div>
             <form  onSubmit={handleSubmit}>
                 <SolidButton title="로그아웃" />
             </form>

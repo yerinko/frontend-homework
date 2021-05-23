@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
-import Ably from "../img/ably.jpeg";
+import { ToMillisecondsTimeString } from "../lib/util";
 import api from "../lib/api";
 import StepTwo from "../components/views/reset-password/setpTwo";
 import StepOne from "../components/views/reset-password/stepOne";
@@ -56,35 +56,29 @@ function ResetPassword ({props}: any)  {
             newPasswordConfirm:''
         });
 
-        alert(`${Email}로 인증번호를 발송합니다.`);
-
-        api.get('/api/reset-password', {
-            params: {
-                email: form.Email
-            }
-        })
-            .then( response => {
-                const { issueToken } = response.data;
-                const timer = setInterval(() => {
+        if (  window.confirm(`${Email}로 인증번호를 발송합니다.`) ) {
+            api.get('/api/reset-password', {
+                params: {
+                    email: form.Email
+                }
+            })
+                .then( response => {
+                    const { issueToken, remainMillisecond } = response.data;
                     setForm({
                         ...form,
                         Email: form.Email,
-                        remainMillisecond: response.data.remainMillisecond -= 1000,
-                        issueToken: issueToken
+                        remainMillisecond: remainMillisecond,
+                        issueToken: issueToken,
                     });
-                    if ( response.data.remainMillisecond === 0 ) {
-                        form.issueToken = '';
-                        clearInterval(timer);
-                        alert('인증시간이 만료되었습니다. 재인증해주세요.');
-                    }
-                }, 1000);
-            })
-            .catch(function (error) {
-                alert('이메일을 다시 확인해주세요!')
-        }).then(function() {
-            // 항상 실행
-        });
-    };
+                })
+                .catch( error  => {
+                    alert('이메일을 다시 확인해주세요 🥲')
+                }).then(function() {
+                // 항상 실행
+            });
+        }};
+
+
 
     const handleAuthCode = (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
@@ -102,8 +96,7 @@ function ResetPassword ({props}: any)  {
                     issueToken: ''
                 });
             })
-            .catch(function (error) {
-                // 오류발생시 실행
+            .catch( response => {
                 alert('인증번호를 다시 확인해주세요!')
             }).then(function() {
             // 항상 실행
@@ -122,7 +115,7 @@ function ResetPassword ({props}: any)  {
             .then( response => {
                 history.push('/')
             })
-            .catch(function (error) {
+            .catch( response =>{
                 // 오류발생시 실행
             }).then(function() {
             // 항상 실행
