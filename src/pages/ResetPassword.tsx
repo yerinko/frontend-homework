@@ -36,6 +36,21 @@ function ResetPassword ({props}: any)  {
 
     const { Email, remainMillisecond, authCode, issueToken, confirmToken, newPassword, newPasswordConfirm } = form;
 
+    const handleOnPasswordInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { value } = e.target;
+        setForm({
+            ...form,
+            newPassword: value
+        });
+    };
+
+    const handleOnConfirmPasswordInput = (e: React.ChangeEvent<HTMLInputElement>) => {
+        const { value } = e.target;
+        setForm({
+            ...form,
+            newPasswordConfirm: value
+        });
+    };
     const onChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setForm({
@@ -115,8 +130,8 @@ function ResetPassword ({props}: any)  {
             .then( response => {
                 history.push('/')
             })
-            .catch( response =>{
-                // 오류발생시 실행
+            .catch( error =>{
+                alert('패스워드가 일치하지 않습니다.')
             }).then(function() {
             // 항상 실행
         });
@@ -141,7 +156,10 @@ function ResetPassword ({props}: any)  {
                     issueToken={issueToken}
                     newPassword={newPassword}
                     newPasswordConfirm={newPasswordConfirm}
-                    onChange={onChange}
+                    onChange={e => handleOnPasswordInput(e)}
+                    onConfirmChange={e =>
+                        handleOnConfirmPasswordInput(e)
+                    }
                     handleResetPassword={handleResetPassword}
                 />
                 : <StepOne
