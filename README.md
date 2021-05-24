@@ -14,13 +14,8 @@
 2. 인증 코드 검증 페이지
 3. 비밀번호 변경 페이지
 
-<img width="320" alt="ably-B" src="https://user-images.githubusercontent.com/46296865/119363777-28a16600-bce9-11eb-939e-f0feecd19014.png">
-
-<img width="320" alt="ably-B2" src="https://user-images.githubusercontent.com/46296865/119363783-2b03c000-bce9-11eb-9ab8-bcbcb9b8bf5e.png">
-
-<img width="320" alt="ably-B3" src="https://user-images.githubusercontent.com/46296865/119363795-2e974700-bce9-11eb-8c62-f26e962ecd71.png">
-
-<img width="320" alt="ably-B4" src="https://user-images.githubusercontent.com/46296865/119363810-322ace00-bce9-11eb-8829-10792a07f0b8.png">
+<img width="320" alt="ably-B" src="https://user-images.githubusercontent.com/46296865/119363777-28a16600-bce9-11eb-939e-f0feecd19014.png"><img width="320" alt="ably-B2" src="https://user-images.githubusercontent.com/46296865/119363783-2b03c000-bce9-11eb-9ab8-bcbcb9b8bf5e.png">
+<img width="320" alt="ably-B3" src="https://user-images.githubusercontent.com/46296865/119363795-2e974700-bce9-11eb-8c62-f26e962ecd71.png"><img width="320" alt="ably-B4" src="https://user-images.githubusercontent.com/46296865/119363810-322ace00-bce9-11eb-8829-10792a07f0b8.png">
 
 
 #### 로그인 페이지 ( as B )
