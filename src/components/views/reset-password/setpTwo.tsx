@@ -83,6 +83,6 @@ function StepTwo ({email, issueToken, authCode, onChange, handleAuthCode, remain
             </form>
         </ResetPasswordBlock>
     );
-};
+}
 
 export default StepTwo;

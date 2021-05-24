@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import styled from "styled-components";
-import { Alert } from 'antd';
 import api from "../lib/api";
 import { useHistory } from 'react-router';
 import { clearAuth, getAccessToken } from "../lib/auth";
@@ -85,6 +84,6 @@ function ProfilePage ()  {
             </form>
         </LoginBlock>
     );
-};
+}
 
 export default ProfilePage;

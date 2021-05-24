@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import styled from "styled-components";
 import SolidButton from "../../../components/common/Button/SolidButton";
 import Input from "../../common/Input/Input";
@@ -36,6 +36,6 @@ function StepOne ({ value, onChange, onSubmit } : ResetPasswordProps)  {
             </form>
         </ResetPasswordBlock>
     );
-};
+}
 
 export default StepOne;

@@ -1,8 +1,8 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
-import Ably from "../img/ably.jpeg";
+import { setAccessToken } from "../lib/auth";
 import api from "../lib/api";
-import { Route, Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import { useHistory } from 'react-router';
 import Input from "../components/common/Input/Input";
 import SolidButton from "../components/common/Button/SolidButton";
@@ -52,7 +52,7 @@ function LoginPage ({props}: any)  {
         })
             .then( response => {
                 const { accessToken } = response.data;
-                sessionStorage.setItem('accessToken', 'Bearer '+accessToken);
+                setAccessToken('Bearer '+accessToken);
                 history.push('/user')
             })
             .catch(function (error) {
@@ -87,6 +87,6 @@ function LoginPage ({props}: any)  {
             </Link>
         </LoginBlock>
     );
-};
+}
 
 export default LoginPage;

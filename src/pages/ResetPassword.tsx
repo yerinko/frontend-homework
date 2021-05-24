@@ -1,6 +1,5 @@
 import React, {useState} from 'react';
 import styled from "styled-components";
-import { ToMillisecondsTimeString } from "../lib/util";
 import api from "../lib/api";
 import StepTwo from "../components/views/reset-password/setpTwo";
 import StepOne from "../components/views/reset-password/stepOne";
@@ -114,7 +113,6 @@ function ResetPassword ({props}: any)  {
             .catch( response => {
                 alert('인증번호를 다시 확인해주세요!')
             }).then(function() {
-            // 항상 실행
         });
     };
 
@@ -134,7 +132,6 @@ function ResetPassword ({props}: any)  {
             .catch( error =>{
                 alert('패스워드가 일치하지 않습니다.')
             }).then(function() {
-            // 항상 실행
         });
     };
 
@@ -171,6 +168,6 @@ function ResetPassword ({props}: any)  {
             }
         </ResetPasswordBlock>
     );
-};
+}
 
 export default ResetPassword;
