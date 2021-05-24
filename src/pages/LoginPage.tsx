@@ -80,7 +80,7 @@ function LoginPage ({props}: any)  {
                     onChange={onChange}
                 />
 
-                <SolidButton title="다음" />
+                <SolidButton title="로그인" />
             </form>
             <Link to="/reset-password">
                 <Button title="비밀번호 재설정"/>

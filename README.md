@@ -1,71 +1,49 @@
-# Getting Started with Create React App
+# ABLY Front-end  과제
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- A + B + C 스펙 모두 구현
 
-## Available Scripts
+## 사용 기술
 
-In the project directory, you can run:
+- Editor/IDE: Intellij
+- Language: TypeScript
+- Framework: React
 
-### `npm start`
+## 구현 범위
+#### 비밀번호 재설정 페이지 ( as A )
+1. 인증 코드 발급 요청 페이지
+2. 인증 코드 검증 페이지
+3. 비밀번호 변경 페이지
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+<img width="320" alt="ably-B" src="https://user-images.githubusercontent.com/46296865/119363777-28a16600-bce9-11eb-939e-f0feecd19014.png">
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+<img width="320" alt="ably-B2" src="https://user-images.githubusercontent.com/46296865/119363783-2b03c000-bce9-11eb-9ab8-bcbcb9b8bf5e.png">
 
-### `npm test`
+<img width="320" alt="ably-B3" src="https://user-images.githubusercontent.com/46296865/119363795-2e974700-bce9-11eb-8c62-f26e962ecd71.png">
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<img width="320" alt="ably-B4" src="https://user-images.githubusercontent.com/46296865/119363810-322ace00-bce9-11eb-8829-10792a07f0b8.png">
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+#### 로그인 페이지 ( as B )
+1. 로그인 Button 클릭하면 아이디와 비밀번호 검증 & 처리
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+<img width="485" alt="ably-C_" src="https://user-images.githubusercontent.com/46296865/119364439-ddd41e00-bce9-11eb-8a19-2c0f0dac5c12.png">
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+#### 회원 정보 조회 페이지 ( as C )
+1. 회원 정보를 보여줄 수 있는 카드에 이름, 이메일, 프로필 이미지 배치
+2. 로그아웃
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+<img width="320" alt="ably-C" src="https://user-images.githubusercontent.com/46296865/119364269-b0877000-bce9-11eb-8a9f-a38f956bd21d.png">
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### 실행
+``` 
+npm install // 필요한 dependency들을 설치합니다.
+```
 
-## Learn More
+``` 
+npm start
+``` 
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-# frontend-homework
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser. 🚀
